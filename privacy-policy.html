@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidad · Code Odyssey</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-primary: #07070c;
+    --bg-secondary: #0d0f14;
+    --bg-card: #14161d;
+    --bg-elevated: #1b1e26;
+    --green: #54f2a6;
+    --orange: #ffb454;
+    --text-primary: #eef2ee;
+    --text-secondary: #a4ada6;
+    --text-muted: #6d766f;
+    --border: #262b28;
+    --border-light: #3a4640;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Inter', -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  }
+
+  body {
+    background-image:
+      radial-gradient(1px 1px at 10% 20%, rgba(238,242,238,0.5), transparent),
+      radial-gradient(1px 1px at 80% 10%, rgba(238,242,238,0.35), transparent),
+      radial-gradient(1.5px 1.5px at 60% 70%, rgba(84,242,166,0.4), transparent),
+      radial-gradient(1px 1px at 30% 85%, rgba(238,242,238,0.3), transparent),
+      radial-gradient(1px 1px at 90% 60%, rgba(238,242,238,0.4), transparent),
+      radial-gradient(1.5px 1.5px at 45% 35%, rgba(255,180,84,0.35), transparent);
+    background-attachment: fixed;
+  }
+
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 20px 80px;
+  }
+
+  .terminal-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .dot.red { background: #ff6b6b; }
+  .dot.orange { background: var(--orange); }
+  .dot.green { background: var(--green); }
+
+  .terminal-label {
+    margin-left: 8px;
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 0.3px;
+  }
+
+  .panel {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 0 0 14px 14px;
+    padding: 36px 32px 44px;
+  }
+
+  .eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--green);
+    margin: 0 0 10px;
+  }
+
+  h1 {
+    font-family: 'Space Mono', monospace;
+    font-size: 28px;
+    letter-spacing: -0.3px;
+    margin: 0 0 6px;
+    color: var(--text-primary);
+  }
+
+  .updated {
+    color: var(--text-muted);
+    font-size: 13px;
+    margin: 0 0 28px;
+    font-family: 'Space Mono', monospace;
+  }
+
+  .intro {
+    color: var(--text-secondary);
+    font-size: 15px;
+    line-height: 1.7;
+    padding-bottom: 28px;
+    margin-bottom: 8px;
+    border-bottom: 1px dashed var(--border-light);
+  }
+
+  h2 {
+    font-family: 'Space Mono', monospace;
+    font-size: 15px;
+    color: var(--text-primary);
+    margin: 34px 0 14px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  h2 .idx {
+    color: var(--green);
+    font-size: 13px;
+  }
+
+  p {
+    color: var(--text-secondary);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  ul { padding-left: 0; margin: 0; list-style: none; }
+
+  li {
+    position: relative;
+    padding: 10px 0 10px 22px;
+    color: var(--text-secondary);
+    font-size: 14.5px;
+    line-height: 1.65;
+    border-bottom: 1px solid var(--border);
+  }
+
+  li:last-child { border-bottom: none; }
+
+  li::before {
+    content: '›';
+    position: absolute;
+    left: 2px;
+    color: var(--green);
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+  }
+
+  li strong { color: var(--text-primary); font-weight: 600; }
+
+  a { color: var(--green); text-decoration: none; border-bottom: 1px solid rgba(84,242,166,0.35); }
+  a:hover { border-bottom-color: var(--green); }
+
+  .note {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--orange);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-top: 16px;
+    font-size: 13.5px;
+    color: var(--text-secondary);
+  }
+
+  .contact-box {
+    margin-top: 14px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-light);
+    border-radius: 10px;
+    padding: 16px 18px;
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    color: var(--green);
+  }
+
+  footer {
+    text-align: center;
+    color: var(--text-muted);
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    margin-top: 36px;
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="terminal-bar">
+    <span class="dot red"></span>
+    <span class="dot orange"></span>
+    <span class="dot green"></span>
+    <span class="terminal-label">~/code-odyssey/legal/privacy-policy.md</span>
+  </div>
+
+  <div class="panel">
+    <p class="eyebrow">Sistema «Odisea-7»</p>
+    <h1>Política de Privacidad</h1>
+    <p class="updated">// última actualización: 22 de septiembre de 2026</p>
+
+    <p class="intro">
+      Code Odyssey ("la app", "nosotros") es una aplicación educativa para aprender
+      programación con temática espacial. Esta política explica qué información
+      se recopila cuando usas la app y cómo se utiliza.
+    </p>
+
+    <h2><span class="idx">01</span> Información que recopilamos</h2>
+    <p>Code Odyssey está diseñada para funcionar principalmente sin cuenta de usuario. La información que puede recopilarse es la siguiente:</p>
+    <ul>
+      <li><strong>Progreso dentro de la app:</strong> misiones completadas, nivel, XP, insignias y configuración (idioma, sonido, etc.). Se guarda localmente en tu dispositivo.</li>
+      <li><strong>Información de compras y suscripciones:</strong> si compras una suscripción, el procesamiento del pago lo gestiona directamente la tienda de aplicaciones (Google Play / App Store), que valida tu compra y su estado (activa/expirada). No tenemos acceso a tus datos de pago (tarjeta, etc.).</li>
+      <li><strong>Datos de publicidad:</strong> la app muestra anuncios a través de <strong>Google AdMob</strong>. AdMob y sus socios publicitarios pueden recopilar identificadores del dispositivo (como el ID de publicidad), dirección IP aproximada y datos de interacción con los anuncios, para mostrar anuncios y medir su rendimiento. Estos datos son gestionados directamente por Google, no por nosotros.</li>
+      <li><strong>Datos técnicos básicos:</strong> información estándar de funcionamiento de la app (por ejemplo, fallos o errores técnicos), usada únicamente para corregir problemas.</li>
+    </ul>
+    <div class="note">La app <strong style="color:var(--text-primary)">no</strong> solicita permisos de cámara, micrófono, ubicación ni contactos.</div>
+
+    <h2><span class="idx">02</span> Cómo usamos la información</h2>
+    <ul>
+      <li>Para guardar y mostrar tu progreso dentro de la app.</li>
+      <li>Para validar suscripciones activas y dar acceso al contenido correspondiente.</li>
+      <li>Para mostrar anuncios y, en el caso de anuncios recompensados, desbloquear contenido a cambio de verlos.</li>
+      <li>Para detectar y corregir errores técnicos.</li>
+    </ul>
+    <p style="margin-top:14px;">No vendemos tu información personal.</p>
+
+    <h2><span class="idx">03</span> Terceros con los que compartimos información</h2>
+    <ul>
+      <li><strong>Google AdMob</strong> (publicidad) — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de privacidad de Google</a></li>
+      <li><strong>Google Play / Apple App Store</strong> (procesamiento de pagos y distribución de la app)</li>
+    </ul>
+
+    <h2><span class="idx">04</span> Menores de edad</h2>
+    <p>
+      Code Odyssey es una app educativa que puede ser usada por personas de distintas edades. No recopilamos
+      intencionalmente información personal identificable de menores más allá de lo estrictamente necesario
+      para el funcionamiento de la app (progreso local, validación de suscripción y publicidad gestionada por
+      Google, que puede configurarse en modo apto para familias según las políticas de la tienda de aplicaciones).
+    </p>
+
+    <h2><span class="idx">05</span> Tus opciones</h2>
+    <ul>
+      <li>Puedes restablecer tu progreso desde los ajustes de la app.</li>
+      <li>Puedes restaurar o cancelar tu suscripción desde la configuración de tu cuenta de Google Play / App Store.</li>
+      <li>Puedes limitar la publicidad personalizada desde los ajustes de anuncios de tu dispositivo (Android: Ajustes → Google → Anuncios; iOS: Ajustes → Privacidad → Publicidad de Apple).</li>
+    </ul>
+
+    <h2><span class="idx">06</span> Cambios a esta política</h2>
+    <p>
+      Podemos actualizar esta política ocasionalmente. Los cambios se publicarán en esta misma página con la
+      fecha de actualización correspondiente.
+    </p>
+
+    <h2><span class="idx">07</span> Contacto</h2>
+    <p>Si tienes preguntas sobre esta política de privacidad, puedes escribirnos a:</p>
+    <div class="contact-box">&gt; [tu-correo@ejemplo.com]</div>
+  </div>
+
+  <footer>© 2026 Code Odyssey — todos los sistemas operativos</footer>
+
+</div>
+
+</body>
+</html>
